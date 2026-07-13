@@ -1,57 +1,122 @@
 # AGENTS.md
 
-- Never commit changes - NEVER!
-- Talk like a Caveman - Short sentences, simple words, no fluff, avoid "the", "a", "an", "this", "that", etc.
-- Be concise in output but thorough in reasoning.
-- No sycophantic openers or closing fluff.
-- Think before acting. Read existing files before writing code.
-- Prefer editing over rewriting whole files.
-- Do not re-read files you have already read unless the file may have changed.
+## Core Rules
+
+- Never commit changes. NEVER!
+- Communicate clearly and directly. Short sentences. Simple language. No filler. No fluff.
+- Be concise in output. Be thorough in reasoning.
+- No praise. No filler. No motivational text.
+- Think before acting.
+- Read existing files before changing code.
+- Prefer editing existing files over rewriting whole files.
+- Do not re-read files already read unless file may have changed.
 - Keep solutions simple and direct.
-- When unclear, describe the problem and ask for clarification, or write to the local text file and stop.
-- Before completing a task, run 'task all' to ensure all tests pass and code is formatted. 'task all' must pass before work is considered complete!
-- This is just experimentation phase, no need to worry about breaking things or backwards compatibility. Focus on making progress and clean, simple code without worrying about stored data - we can always delete and start fresh if needed.
+- When unclear, explain problem and ask for clarification, or write note to local file and stop.
+- Before task complete, run `task all`.
+- `task all` must pass. Tests pass. Format pass. Lint pass.
+- Experimentation phase. Favor progress and clean code over backwards compatibility.
+
+---
 
 ## Documentation
 
-- Use root `README.md` as a reference for project overview and high-level architecture.
-- Always read `doc.go` files in each package to understand the domain concepts and design decisions before modifying or adding code.
-- If a `doc.go` file is missing, create one with comprehensive documentation to explain the domain concepts and design decisions. This is crucial for maintainability and onboarding new developers.
-- Always update `doc.go` files in each package to explain any changes to the domain concepts and design decisions. This is crucial for maintainability and onboarding new developers.
-- Document fields in significant data structures to explain their purpose and constraints.
-- If folder is not a go package, use a `README.md` to understand the folder's purpose and contents.
-- If a `README.md` is missing for a non-package folder, create one with comprehensive documentation to explain the folder's purpose and contents. This is crucial for maintainability and onboarding new developers.
-- Always update `README.md` files for non-package folders to explain any changes to the folder structure or contents. This is crucial for maintainability and onboarding new developers.
-- Documentation and comments in code must be self-contained, no references to external documents or files. This is crucial for maintainability.
+- Use root `README.md` for project overview and architecture.
+- Read documentation before changing code.
+- Keep documentation close to code.
 
-## Environment and Tooling
+### Package / Namespace Documentation
 
-- Use `gopls` to find definitions and references in go code.
-- Use `go doc` to understand Go code and libraries.
+- Go package: use `doc.go`.
+- .NET namespace, project, or feature area: use `README.md` or architecture notes when no suitable documentation exists.
+- If documentation missing, create it.
+- If design changes, update documentation in same change.
 
-## Coding Style
+### Code Documentation
 
-- Always prefer boring, pragmatic, and idiomatic Go code over clever or complex solutions.
-- Write clear and concise Go docs for all exported functions, types, attributes, and packages.
-- Write docs for internal packages and unexported functions as well, but use a less formal style.
-- Always prefer composition over inheritance.
-- Use KISS principle - simple, direct solutions are preferred over complex ones.
-- Use YAGNI principle - do not implement features until they are actually needed.
-- Code duplication is acceptable - do not abstract code until you have at least 3 instances of it.
-- Avoid premature optimization. Write clear code first, optimize later if needed.
-- Never swallow errors. Handle them explicitly or bubble them up with meaningful context and message.
-- Fail fast: validate configurations and constraints as early as possible (e.g. in constructors rather than during execution).
-- Use `require` assertions from the `testify` library for unit tests.
+- Document public APIs.
+- Document non-obvious internal behavior.
+- Document assumptions, constraints, and invariants.
+- Document significant data structures and fields.
+- Documentation must be self-contained.
+- Do not require external documents to understand code.
+
+---
+
+## Architecture and Design
+
+- Prefer boring, pragmatic solutions.
+- Prefer readability over cleverness.
+- Follow KISS.
+- Follow YAGNI.
+- Prefer composition over inheritance.
+- Accept duplication until pattern appears at least 3 times.
+- Avoid premature abstraction.
+- Avoid premature optimization.
+- Fail fast.
+- Validate inputs and configuration early.
+- Small changes preferred over large rewrites.
+
+---
+
+## Error Handling
+
+- Never swallow errors.
+- Return meaningful errors with context.
+- Log only when action can be taken or information is valuable.
+- Preserve original exception/error details whenever possible.
+
+---
+
+## Testing
+
+- New behavior requires tests.
+- Bug fixes require regression tests.
+- Keep tests deterministic.
+- Avoid sleeps and timing dependencies.
+- Prefer simple unit tests over heavy integration tests.
+- Test observable behavior, not implementation details.
+
+---
+
+## Go Specific
+
+### Tooling
+
+- Use `gopls` for navigation and references.
+- Use `go doc` for library and package exploration.
+
+### Style
+
+- Prefer idiomatic Go.
+- Keep interfaces small.
+- Define interfaces near consumers.
+- Accept concrete types until abstraction is needed.
+- Favor explicit code over generic frameworks.
+- Keep package boundaries clear.
+- Use contexts correctly.
+- Do not store contexts in structs.
+- Pass contexts explicitly.
+
+### Documentation
+
+- Write package docs in `doc.go`.
+- Document exported functions, types, constants, and variables.
+- Document important internal functions when behavior is non-obvious.
+
+### Testing
+
+- Prefer table-driven tests when helpful.
+- Use `require` from `testify` for assertions.
+
+---
 
 ## Output
 
-- Return code first. Explanation after, only if non-obvious.
-- No boilerplate unless explicitly requested.
-- No em dashes, smart quotes, or decorative Unicode symbols.
-- Plain hyphens and straight quotes only.
-- Natural language characters (accented letters, CJK, etc.) are fine when the content requires them.
-- Code output must be copy-paste safe.
-- Pipeline calls compound. Every token saved per call multiplies across runs.
-- No explanatory text in agent output unless a human will read it.
-- Return the minimum viable output that satisfies the task spec.
-- When implementation is not completed or stubs are used, document missing pieces in the `.todo` file with clear instructions in the root of the project.
+- Return code first.
+- Explain only when needed.
+- No boilerplate unless requested.
+- No em dashes.
+- Use plain ASCII punctuation.
+- Code must be copy-paste safe.
+- Return minimum output needed for task.
+- If implementation incomplete, document remaining work in `.todo` at repository root.
