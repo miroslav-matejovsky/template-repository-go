@@ -49,11 +49,10 @@
   ],
   "gopls": {
     "build.buildFlags": [
-      "-tags=mage,integration"
+      "-tags=integration"
     ],
     "standaloneTags": [
-      "ignore",
-      "mage"
+      "ignore"
     ]
   },
   "cSpell.words": [
