@@ -1,3 +1,3 @@
 # Template Repository
 
-Template for my personal repositories.
+- <https://www.alexedwards.net/blog/how-i-use-htmx-with-go>
