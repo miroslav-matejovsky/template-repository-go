@@ -44,7 +44,9 @@
   "powershell.startAutomatically": true,
   "powershell.integratedConsole.showOnStartup": false,
   "powershell.enableProfileLoading": true,
+  "go.testTimeout": "20m",
   "go.testFlags": [
+    "-v",
     "-tags=integration"
   ],
   "gopls": {
