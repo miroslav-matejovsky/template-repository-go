@@ -47,6 +47,7 @@
   "go.testTimeout": "20m",
   "go.testFlags": [
     "-v",
+    "-count=1",
     "-tags=integration"
   ],
   "gopls": {
