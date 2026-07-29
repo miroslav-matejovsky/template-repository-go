@@ -29,6 +29,7 @@
     "main"
   ],
   "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Flexoki Dark",
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
