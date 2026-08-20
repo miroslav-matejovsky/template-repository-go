@@ -88,7 +88,6 @@ tasks:
 
   go-tools:
     desc: Install or update required Go tools
-    silent: true
     cmds:
       - echo "deadcode for clean code by detecting unused functions"
       - go install golang.org/x/tools/cmd/deadcode@latest
