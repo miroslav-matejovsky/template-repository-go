@@ -16,6 +16,7 @@
     "docs/godocs/**": true
   },
   "chat.agentsControl.enabled": "hidden",
+  "chat.agent.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.enable": {
     "*": true,
