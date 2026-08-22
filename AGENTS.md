@@ -84,6 +84,7 @@
 
 - Use `gopls` for navigation and references.
 - Use `go doc` for library and package exploration.
+- Nothing in vendor folder must be modified or committed, the vendor folder contains third-party dependencies and should be treated as read-only.
 
 ### Style
 
