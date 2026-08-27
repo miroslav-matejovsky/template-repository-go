@@ -24,6 +24,7 @@
 - Use root `README.md` for project overview and architecture.
 - Read documentation before changing code.
 - Keep documentation close to code.
+- Keep documentation synchronized with the implementation. Outdated documentation is considered a defect.
 
 ### Package / Namespace Documentation
 
