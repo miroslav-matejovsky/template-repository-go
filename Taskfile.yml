@@ -89,6 +89,9 @@ tasks:
   go-tools:
     desc: Install or update required Go tools
     cmds:
+      - echo "govulncheck for checking known vulnerabilities in dependencies"
+      - go install golang.org/x/vuln/cmd/govulncheck@latest
+
       - echo "deadcode for clean code by detecting unused functions"
       - go install golang.org/x/tools/cmd/deadcode@latest
 
