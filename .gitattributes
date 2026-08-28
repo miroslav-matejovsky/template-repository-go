@@ -111,6 +111,9 @@ Makefile text
 # Standard Go vendoring
 vendor/** linguist-vendored
 
+# Mark captures folder as generated files (hides from language stats and collapses)
+captures/** linguist-generated=true
+
 # Common generated Go patterns
 *_generated.go linguist-generated
 *_gen.go       linguist-generated
