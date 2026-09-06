@@ -25,6 +25,8 @@
 - Read documentation before changing code.
 - Keep documentation close to code.
 - Keep documentation synchronized with the implementation. Outdated documentation is considered a defect.
+- Focus documentation on the package or folder's actual contents, responsibilities, and purpose.
+- Avoid describing what it does not contain or what it is not; document the implemented structure and its intent.
 
 ### Package / Namespace Documentation
 
