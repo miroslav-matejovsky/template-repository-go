@@ -80,6 +80,12 @@ tasks:
 
 # ---- maintenance tasks ----
 
+  vendor:
+    desc: Re-sync the committed vendor/ tree after changing dependencies (tidy + vendor)
+    silent: true
+    cmds:
+      - pwsh -NoProfile -NonInteractive -File taskfile/vendor.ps1
+
   deps:
     desc: List direct dependencies with available updates
     silent: true
