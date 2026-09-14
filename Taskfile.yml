@@ -87,10 +87,11 @@ tasks:
       - pwsh -NoProfile -NonInteractive -File taskfile/vendor.ps1
 
   deps:
-    desc: List direct dependencies with available updates
+    desc: List direct dependencies with available updates, after updating go.mod run 'task vendor' to re-sync the vendor tree
     silent: true
     cmds:
-      - go list -u -m -f "{{`{{if not .Indirect}}{{.}}{{end}}`}}" all
+      - go mod tidy
+      - go list -mod=readonly -u -m -f "{{`{{if not .Indirect}}{{.}}{{end}}`}}" all
 
   go-tools:
     desc: Install or update required Go tools
