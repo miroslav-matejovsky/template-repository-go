@@ -1,15 +1,13 @@
 # Plans
 
-This directory contains active implementation plans. Use one folder per plan
-and one numbered Markdown file per implementation step.
+This directory contains implementation plans. A plan is an executable specification, not a discussion document.
 
-Each plan README explains the goal, value, scope, and relevant context.
-Each implementation step records its dependencies, detailed implementation work, verification,
-acceptance criteria, effort, and complexity. Remove the plan folder after every
-acceptance criterion is verified and the work is accepted; version control
-retains the history.
+Each plan has:
+- `README.md` describing goal, scope, architecture impact, deliverables, and success criteria
+- `assessment.md` describing feasibility, risks, dependencies, validation, and rollback
+- numbered implementation steps (`01-*.md`, `02-*.md`, ...)
 
-Step contains yaml front matter:
+Each step contains YAML front matter:
 
 ```yaml
 title: "01 - Step title"
@@ -18,9 +16,27 @@ effort: "S|M|L|XL"
 complexity: "low|medium|high|very_high"
 ```
 
-Each plan contains assessment.md that contains the assessment of the impact, feasibility, and potential risks associated with the plan.
+Each step must contain:
+- **Objective**: exact outcome of the step
+- **Target Artifacts**: files, modules, APIs, schemas, configurations, and tests to modify
+- **Implementation Tasks**: ordered, concrete development actions
+- **Technical Details**: classes, methods, interfaces, contracts, migrations, and configuration changes
+- **Verification**: exact commands and validation activities
+- **Acceptance Criteria**: binary, objectively testable conditions
+- **Non-Goals**: what is explicitly not implemented
 
-## Active plans
+Requirements:
+- Every task must describe **what to change, where to change it, and how it will be verified**
+- Reference specific files, APIs, classes, methods, database objects, and tests whenever possible
+- Define implementation order explicitly through dependencies
+- Include required unit, integration, and regression tests or justify their absence
+- Acceptance criteria must be measurable and independently verifiable
 
-| Plan | Backlog priority | Outcome |
-| --- | ---: | --- |
+Forbidden:
+- Vague work items such as "improve", "enhance", "optimize", "refactor", or "investigate"
+- Open-ended research tasks
+- Future considerations, ideas, or alternatives
+- Statements without implementation details
+- Acceptance criteria that require subjective judgment
+
+A plan is complete only when all implementation tasks are finished, all tests pass, all acceptance criteria are verified, and the deliverables exist in the codebase.
