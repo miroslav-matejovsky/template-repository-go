@@ -56,6 +56,8 @@
 - Fail fast.
 - Validate inputs and configuration early.
 - Small changes preferred over large rewrites.
+- Treat application configuration files as an insight into system behavior, not just as a source of values.
+- No defaults are allowed; all configuration must be explicit and documented in the configuration files.
 
 ## Error Handling
 
