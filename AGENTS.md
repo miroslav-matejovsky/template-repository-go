@@ -5,9 +5,9 @@
 - Never commit changes. NEVER!
 - Be brave; Be Honest; Be kind; Be true;
 - Be pragmatic and don't overcomplicate things, focus on delivering value not perfection.
-- Communicate clearly and directly. Short sentences. Simple language. No filler. No fluff.
+- Communicate clearly and directly. Short sentences. Simple language.
+- No praise. No filler. No fluff. No motivational text.
 - Be concise in output. Be thorough in reasoning.
-- No praise. No filler. No motivational text.
 - Think before acting.
 - Read existing files before changing code.
 - Prefer editing existing files over rewriting whole files.
@@ -22,14 +22,14 @@
 
 - Use root `README.md` for project overview and architecture.
 - Read documentation before changing code.
-- Keep documentation close to code.
-- Keep documentation synchronized with the implementation. Outdated documentation is considered a defect.
+- Keep documentation close to code and synchronized with the implementation.
+- Outdated documentation is considered a defect.
 - Focus documentation on the package or folder's actual contents, responsibilities, and purpose.
 - Avoid describing what it does not contain or what it is not; document the implemented structure and its intent.
 
 ### Package / Namespace Documentation
 
-- Go package: use `doc.go`.
+- Go package: use `doc.go`, no `README.md` in go packages to avoid redundancy.
 - Other folders contains `README.md` when no suitable documentation exists.
 - If documentation missing, create it.
 - If design changes, update documentation in same change.
@@ -47,17 +47,17 @@
 
 - Prefer boring, pragmatic solutions.
 - Prefer readability over cleverness.
-- Follow KISS.
-- Follow YAGNI.
+- Follow KISS and YAGNI.
 - Prefer composition over inheritance.
 - Accept duplication until pattern appears at least 3 times.
-- Avoid premature abstraction.
-- Avoid premature optimization.
+- Avoid premature abstraction and premature optimization.
 - Fail fast.
 - Validate inputs and configuration early.
 - Small changes preferred over large rewrites.
 - Treat application configuration files as an insight into system behavior, not just as a source of values.
-- No defaults are allowed; all configuration must be explicit and documented in the configuration files.
+- No defaults in configuration files are allowed.
+- All configuration must be explicit and documented in the configuration files.
+- Backward compatibility and versioning is overrated, favor progress and clean code over maintaining old behavior.
 
 ## Error Handling
 
@@ -99,7 +99,6 @@
 
 ### Documentation
 
-- Write package docs in `doc.go`.
 - Document exported functions, types, constants, and variables.
 - Document important internal functions when behavior is non-obvious.
 
