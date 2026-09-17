@@ -13,6 +13,7 @@
   "editor.acceptSuggestionOnEnter": "smart",
   "search.exclude": {
     "**/*.svg": true,
+    "vendor/**": true,
     "docs/godocs/**": true
   },
   "chat.agentsControl.enabled": "hidden",
