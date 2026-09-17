@@ -14,8 +14,7 @@
 - Do not re-read files already read unless file may have changed.
 - Keep solutions simple and direct.
 - When unclear, explain problem and ask for clarification, or write note to local file and stop.
-- Before task complete, run `task all`.
-- `task all` must pass. Tests pass. Format pass. Lint pass.
+- Before task complete and code changes are made, run `task all` and `task all` must pass.
 - Experimentation phase. Favor progress and clean code over backwards compatibility.
 
 ## Documentation
