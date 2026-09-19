@@ -1,12 +1,24 @@
-# Technical evaluations
+# Technical Evaluations
 
-This directory contains dated evaluations of new ideas, data, observations, external tools,
-and techniques against the system's architecture and workflows. Each evaluation is stored in its own distinct file.
+This directory contains evaluations that support code evolution in this repository.
 
-Every evaluation identifies its sources, the repository revision reviewed, local evidence, and decisions or follow-up work.
-Revisit a decision when its stated trigger or the surrounding code changes.
+All evaluations are stored under `docs/evaluations/`. Each evaluation has its own folder.
+The evaluation folder `README.md` is the authoritative record containing the summary.
+Additional files contain supporting rationale, evidence, notes or references.
+
+```text
+evaluations/
+├── README.md              # Index of all evaluations
+├── <evaluation-topic>/
+│   ├── README.md          # Summary and decision
+│   ├── rationale.md
+│   ├── evidence.md
+│   ├── benchmarks.md
+│   └── ...
+└── ...
+```
 
 ## Evaluations
 
-| Evaluation | Decision |
+| Evaluation | Date |
 | --- | --- |
