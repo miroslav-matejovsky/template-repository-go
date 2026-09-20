@@ -20,19 +20,19 @@ tasks:
       - go mod tidy
       - echo tidy done
 
-  vet:
-    desc: Run go vet to check for potential issues
-    silent: true
-    cmds:
-      - go vet ./...
-      - echo vet done
-
   fmt:
     desc: Run go fmt to format the code
     silent: true
     cmds:
       - go fmt ./...
       - echo fmt done
+
+  vet:
+    desc: Run go vet to check for potential issues
+    silent: true
+    cmds:
+      - go vet ./...
+      - echo vet done
 
   arch-lint:
     desc: Run go-arch-lint to check package dependencies and architectural rules
@@ -70,8 +70,8 @@ tasks:
         vars:
           QUIET: "1"
       - task tidy
-      - task vet
       - task fmt
+      - task vet
       - task deadcode
       - task arch-lint
       - task lint
