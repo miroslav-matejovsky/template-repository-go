@@ -103,6 +103,7 @@ tasks:
 
   go-tools:
     desc: Install or update required Go tools
+    silent: true
     cmds:
       - echo "govulncheck for checking known vulnerabilities in dependencies"
       - go install golang.org/x/vuln/cmd/govulncheck@latest
