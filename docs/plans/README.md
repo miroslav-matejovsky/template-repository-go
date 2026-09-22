@@ -4,7 +4,9 @@ This directory contains implementation plans. A plan is an executable specificat
 
 Each plan has:
 - `README.md` describing goal, scope, architecture impact, deliverables, and success criteria
+- `alternatives.md` describing possible alternative approaches and their trade-offs
 - `assessment.md` describing feasibility, risks, dependencies, validation, and rollback
+- `progress.md` describing the current status by explicitly listing completed and pending steps in simple table format
 - numbered implementation steps (`01-*.md`, `02-*.md`, ...)
 
 Each step contains YAML front matter:
@@ -26,6 +28,7 @@ Each step must contain:
 - **Non-Goals**: what is explicitly not implemented
 
 Requirements:
+- Plan must be understandable and actionable even by a medium-skilled developer.
 - Every task must describe **what to change, where to change it, and how it will be verified**
 - Reference specific files, APIs, classes, methods, database objects, and tests whenever possible
 - Define implementation order explicitly through dependencies
@@ -40,3 +43,5 @@ Forbidden:
 - Acceptance criteria that require subjective judgment
 
 A plan is complete only when all implementation tasks are finished, all tests pass, all acceptance criteria are verified, and the deliverables exist in the codebase.
+
+## Active plan sets
