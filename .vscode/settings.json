@@ -61,6 +61,18 @@
       "ignore"
     ]
   },
+  "files.associations": {
+    ".env.ps1": "powershell"
+  },
+  "vsicons.associations.folders": [
+    {
+      "icon": "docs",
+      "extensions": [
+        "dev"
+      ],
+      "format": "svg"
+    }
+  ],
   "cSpell.words": [
     "buildid",
     "deadcode",
