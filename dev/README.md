@@ -8,11 +8,12 @@ Each folder has its own `README.md` that defines its file format and holds its i
 
 | Folder | Purpose |
 | --- | --- |
-| [`plans/`](plans/README.md) | Active implementation plans. Executable specifications split into numbered steps. |
+| [`assessments/`](assessments/README.md) | Evidence-backed reviews of the repository at a specific revision. |
 | [`backlog/`](backlog/README.md) | Open implementation and tuning work not yet planned, one item per file. |
 | [`bugs/`](bugs/README.md) | Confirmed defects awaiting a fix, one bug per file. |
-| [`assessments/`](assessments/README.md) | Evidence-backed reviews of the repository at a specific revision. |
 | [`evaluations/`](evaluations/README.md) | Technical evaluations and decisions that support code evolution. |
+| [`investigations/`](investigations/README.md) | Problem analyses usually on live system runtime, for example performance issues. |
+| [`plans/`](plans/README.md) | Active implementation plans. Executable specifications split into numbered steps. |
 
 ## Flow
 
