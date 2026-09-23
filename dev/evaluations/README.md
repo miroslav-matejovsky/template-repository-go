@@ -2,7 +2,7 @@
 
 This directory contains evaluations that support code evolution in this repository.
 
-All evaluations are stored under `docs/evaluations/`. Each evaluation has its own folder.
+All evaluations are stored under `dev/evaluations/`. Each evaluation has its own folder.
 The evaluation folder `README.md` is the authoritative record containing the summary.
 Additional files contain supporting rationale, evidence, notes or references.
 

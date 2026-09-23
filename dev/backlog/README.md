@@ -3,7 +3,7 @@
 Open implementation and tuning work, grouped by subsystem.
 Completed, covered, and decision-only items do not belong here.
 
-Each backlog item is a separate file in `docs\backlog\`, containing the item's
+Each backlog item is a separate file in `dev/backlog/`, containing the item's
 Effort, Value, and details, including anything it requires. This index only
 lists and links items; it does not repeat their details.
 
