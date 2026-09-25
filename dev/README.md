@@ -8,6 +8,7 @@ Each folder has its own `README.md` that defines its file format and holds its i
 
 | Folder | Purpose |
 | --- | --- |
+| [`principles/`](principles/README.md) | Core design principles and guidelines for the repository. |
 | [`assessments/`](assessments/README.md) | Evidence-backed reviews of the repository at a specific revision. |
 | [`backlog/`](backlog/README.md) | Open implementation and tuning work not yet planned, one item per file. |
 | [`bugs/`](bugs/README.md) | Confirmed defects awaiting a fix, one bug per file. |
@@ -17,6 +18,7 @@ Each folder has its own `README.md` that defines its file format and holds its i
 
 ## Flow
 
+- Principles guide the overall design and decision-making process. Always refer to them when making changes or adding new features.
 - Assessments and evaluations produce findings and decisions.
 - Findings become bugs or backlog items.
 - Backlog items and bugs selected for work become plans.
