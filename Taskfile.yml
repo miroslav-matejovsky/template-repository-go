@@ -3,6 +3,7 @@ version: "3"
 tasks:
   default:
     desc: Show available tasks
+    silent: true
     cmds:
       - task --list
 
