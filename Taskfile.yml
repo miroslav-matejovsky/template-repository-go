@@ -34,6 +34,12 @@ tasks:
       - go vet ./...
       - echo vet done
 
+  deadcode:
+    desc: Check for unreachable functions in cmd entry points
+    silent: true
+    cmds:
+      - pwsh -NoProfile -NonInteractive -File taskfile/deadcode.ps1
+
   arch-lint:
     desc: Run go-arch-lint to check package dependencies and architectural rules
     silent: true
@@ -48,12 +54,6 @@ tasks:
       - echo "Running golangci-lint. This may take a moment..."
       - golangci-lint run ./...
       - echo lint done
-
-  deadcode:
-    desc: Check for unreachable functions in cmd entry points
-    silent: true
-    cmds:
-      - pwsh -NoProfile -NonInteractive -File taskfile/deadcode.ps1
 
   test:
     desc: Run unit tests (saved to .test-results/)
