@@ -29,6 +29,7 @@ Each step must contain:
 
 Requirements:
 - Plan must be understandable and actionable even by a medium-skilled developer.
+- Plan must be evaluated against the principles defined in the `dev/principles` folder.
 - Every task must describe **what to change, where to change it, and how it will be verified**
 - Reference specific files, APIs, classes, methods, database objects, and tests whenever possible
 - Define implementation order explicitly through dependencies
@@ -45,3 +46,7 @@ Forbidden:
 A plan is complete only when all implementation tasks are finished, all tests pass, all acceptance criteria are verified, and the deliverables exist in the codebase.
 
 ## Active plan sets
+
+| Name | Description |
+|------|-------------|
+| Example Plan | Demonstrates the structure and content of a typical implementation plan |

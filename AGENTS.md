@@ -14,6 +14,7 @@
 - When unclear, explain problem and ask for clarification, or write note to local file and stop.
 - Before task complete and code changes are made, run `task all` and `task all` must pass.
 - Experimentation phase. Favor progress and clean code over backwards compatibility.
+- Bigger decisions must be evaluated against principles defined in `dev/principles` folder.
 
 ## Documentation
 
@@ -115,7 +116,6 @@
 - Document restart assumptions and side effects.
 - Treat restarts as normal system behavior.
 - Assume every actor will eventually fail.
-
 
 ### Concurrency
 
