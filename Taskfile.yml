@@ -90,7 +90,7 @@ tasks:
       - echo vscode-ext-test done
 
   vscode-ext-install:
-    desc: Install the local VS Code extension (junction into ~/.vscode/extensions), then reload VS Code
+    desc: Install the local VS Code extension (copy into ~/.vscode/extensions), then reload VS Code
     silent: true
     cmds:
       - pwsh -NoProfile -NonInteractive -File .vscode/extensions/path-mention/install.ps1

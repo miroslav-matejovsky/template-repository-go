@@ -1,8 +1,10 @@
-# Installs this extension into the user's VS Code by linking it into ~/.vscode/extensions.
+# Installs this extension into the user's VS Code by copying it into ~/.vscode/extensions.
 #
-# VS Code does not load extensions from a workspace .vscode/extensions folder, so a directory
-# junction (no admin rights needed) points the user extensions folder at this source folder.
-# Edits here take effect after "Developer: Reload Window". Re-running replaces the existing link.
+# VS Code does not load extensions from a workspace .vscode/extensions folder, so the runtime
+# files are copied into the user extensions folder. The copied set is the same one vsce packages:
+# package.json, README.md and the entries of the "files" list in package.json.
+# Re-run after every change, then run "Developer: Reload Window". Re-running replaces the existing
+# install, including an older junction-based install.
 
 $ErrorActionPreference = "Stop"
 
@@ -12,9 +14,12 @@ $target = Join-Path $HOME ".vscode/extensions/$name"
 
 if (Test-Path $target) {
   $item = Get-Item $target -Force
-  if (-not $item.LinkType) { throw "$target exists and is not a link, remove it manually" }
-  $item.Delete()
+  # A junction must be removed as a link, recursive removal would delete the source folder.
+  if ($item.LinkType) { $item.Delete() } else { Remove-Item $target -Recurse -Force }
 }
 
-New-Item -ItemType Junction -Path $target -Target $PSScriptRoot | Out-Null
+New-Item -ItemType Directory -Path $target | Out-Null
+foreach ($file in @("package.json", "README.md") + $manifest.files) {
+  Copy-Item (Join-Path $PSScriptRoot $file) -Destination $target -Recurse
+}
 Write-Output "installed $name -> $target, reload VS Code windows to activate"

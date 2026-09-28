@@ -13,9 +13,11 @@ Local VS Code extension. In an untitled document (new unsaved buffer, e.g. from 
 - `extension.js` - VS Code glue: completion provider for untitled and Markdown documents.
 - `mention.js` - pure logic: finding the `@` mention before the cursor, building the exclude glob.
 - `mention.test.js` - unit tests for `mention.js` (`node --test`).
-- `install.ps1` - links this folder into `~/.vscode/extensions`.
+- `install.ps1` - copies the runtime files (`package.json`, `README.md`, `files` list) into `~/.vscode/extensions`.
+
+`package.json` is a valid `vsce` manifest. `files` lists the runtime files, so a future `vsce package` includes only those plus `package.json`, `README.md` and a license file.
 
 ## Tasks
 
 - `task vscode-ext-test` - run unit tests.
-- `task vscode-ext-install` - install (junction), then run `Developer: Reload Window`.
+- `task vscode-ext-install` - install (copy), then run `Developer: Reload Window`. Re-run after every change.
