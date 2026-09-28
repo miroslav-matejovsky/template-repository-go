@@ -1,8 +1,8 @@
 {
   "name": "path-mention",
   "displayName": "Path Mention",
-  "description": "Type @ in an untitled document to insert a workspace file path, filtered like Ctrl+P.",
-  "version": "0.0.1",
+  "description": "Type @ in an untitled or Markdown document to insert a workspace file path, filtered like Ctrl+P.",
+  "version": "0.1.0",
   "publisher": "local",
   "private": true,
   "engines": {

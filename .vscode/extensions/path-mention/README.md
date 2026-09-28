@@ -1,6 +1,6 @@
 # Path Mention
 
-Local VS Code extension. In an untitled document (new unsaved buffer, e.g. from `Ctrl+N`), typing `@` opens a list of workspace files.
+Local VS Code extension. In an untitled document (new unsaved buffer, e.g. from `Ctrl+N`) or a Markdown document, typing `@` opens a list of workspace files.
 
 - `@` triggers only at line start or after whitespace, so e-mail addresses do not trigger it.
 - Text typed after `@` fuzzy-filters on the workspace-relative path, like `Ctrl+P`.
@@ -10,7 +10,7 @@ Local VS Code extension. In an untitled document (new unsaved buffer, e.g. from 
 
 ## Files
 
-- `extension.js` - VS Code glue: completion provider for the `untitled` scheme.
+- `extension.js` - VS Code glue: completion provider for untitled and Markdown documents.
 - `mention.js` - pure logic: finding the `@` mention before the cursor, building the exclude glob.
 - `mention.test.js` - unit tests for `mention.js` (`node --test`).
 - `install.ps1` - links this folder into `~/.vscode/extensions`.

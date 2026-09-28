@@ -1,4 +1,4 @@
-// VS Code glue for "@" path mentions in untitled (unsaved, new) documents.
+// VS Code glue for "@" path mentions in untitled (unsaved, new) documents and Markdown documents.
 //
 // Typing "@" opens the suggest widget with all workspace files. Text typed after "@" fuzzy-filters
 // on the workspace-relative path, like Ctrl+P. Accepting inserts the relative path after "@".
@@ -10,13 +10,16 @@ const vscode = require("vscode");
 const path = require("path");
 const { findMention, excludeGlob } = require("./mention");
 
+// Documents where "@" opens the file list: any untitled document, and Markdown in any scheme (saved or untitled).
+const SELECTOR = [{ scheme: "untitled" }, { language: "markdown" }];
+
 // Upper bound on listed files so huge workspaces do not stall the suggest widget.
 const MAX_FILES = 20000;
 
 /** @param {vscode.ExtensionContext} context */
 function activate(context) {
   context.subscriptions.push(
-    vscode.languages.registerCompletionItemProvider({ scheme: "untitled" }, { provideCompletionItems }, "@"),
+    vscode.languages.registerCompletionItemProvider(SELECTOR, { provideCompletionItems }, "@"),
   );
 }
 
