@@ -1,0 +1,18 @@
+{
+  "name": "path-mention",
+  "displayName": "Path Mention",
+  "description": "Type @ in an untitled document to insert a workspace file path, filtered like Ctrl+P.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "test": "node --test"
+  }
+}
