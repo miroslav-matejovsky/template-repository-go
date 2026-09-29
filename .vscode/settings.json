@@ -80,6 +80,7 @@
     "explainability",
     "fe3dback",
     "frontends",
+    "gocache",
     "golangci",
     "gopls",
     "gotest",
@@ -92,6 +93,7 @@
     "miroslav",
     "overcomplicate",
     "pkgname",
+    "stretchr",
     "taskfile"
   ]
 }
