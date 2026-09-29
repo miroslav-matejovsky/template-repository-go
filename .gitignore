@@ -1,5 +1,5 @@
 .env
 .env.ps1
-bin
-.test-results
-.gocache
+bin/
+.test-results/
+.gocache/
