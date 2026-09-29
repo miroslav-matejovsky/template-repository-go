@@ -79,22 +79,6 @@ tasks:
       - task test
       - echo all done
 
-# ---- vscode extension ----
-
-  vscode-ext-test:
-    desc: Run unit tests of the local VS Code extension in .vscode/extensions/path-mention
-    silent: true
-    dir: .vscode/extensions/path-mention
-    cmds:
-      - node --test
-      - echo vscode-ext-test done
-
-  vscode-ext-install:
-    desc: Install the local VS Code extension (copy into ~/.vscode/extensions), then reload VS Code
-    silent: true
-    cmds:
-      - pwsh -NoProfile -NonInteractive -File .vscode/extensions/path-mention/install.ps1
-
 # ---- running stuff ----
 
   run:
