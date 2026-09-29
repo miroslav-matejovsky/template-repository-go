@@ -45,6 +45,7 @@
 
 - Prefer boring, pragmatic solutions.
 - Prefer readability over cleverness.
+- Use TDD (Test-Driven Development) and think in terms of tests first.
 - Follow KISS and YAGNI.
 - Prefer composition over inheritance.
 - Accept duplication until a pattern appears at least 3 times.
@@ -155,9 +156,9 @@
 - Do not use logging as error handling.
 - Avoid duplicate logging across layers.
 
-
 ## Testing
 
+- Tests should be written before the corresponding implementation (TDD).
 - New behavior requires tests.
 - Bug fixes require regression tests.
 - Keep tests deterministic.
