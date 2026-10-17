@@ -8,7 +8,7 @@ Each folder has a `README.md` describing its contents and expected format.
 
 | Folder               | Purpose                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------ |
-| principles/README.md | Development principles applied and considered before every decision.                       |
+| principles/README.md | Principles considered before every decision.                                               |
 | studies/README.md    | Evidence-backed examinations of the repository, system behavior, architecture, or tooling. |
 | bugs/README.md       | Confirmed defects awaiting correction.                                                     |
 | backlog/README.md    | Implementation and tuning work not currently planned.                                      |
