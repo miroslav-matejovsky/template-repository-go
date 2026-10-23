@@ -27,6 +27,14 @@ Each step must contain:
 - **Acceptance Criteria**: binary, objectively testable conditions
 - **Non-Goals**: what is explicitly not implemented
 
+Step order:
+- Order steps outside-in: start at the user-facing outcome and move toward the supporting detail (UI -> API -> domain -> storage).
+- Step `01` defines the contracts the user-facing behavior needs: interfaces, request and response types, errors, and configuration keys. Interfaces are declared next to their consumer.
+- Each following step replaces one contract with a real implementation, working from the outermost layer inward.
+- No step introduces code that nothing calls. New code is wired into a caller reachable from an entry point in the same step, so dead code checks stay green.
+- Until a layer is implemented, its contract is satisfied by the simplest failing implementation, for example a stub returning a "not implemented" error. Stubs are replaced, never accumulated.
+- Every step is verifiable on its own. A step that can only be verified once a later step exists is ordered incorrectly; split it or move the verification into the step that completes the behavior.
+
 Requirements:
 - Plan must be understandable and actionable even by a medium-skilled developer.
 - Plan must be evaluated against the principles defined in the `dev/principles` folder.
@@ -37,6 +45,8 @@ Requirements:
 - Acceptance criteria must be measurable and independently verifiable
 
 Forbidden:
+- Bottom-up step order that builds storage or infrastructure before the behavior that consumes it
+- Steps that leave code unreferenced until a later step
 - Vague work items such as "improve", "enhance", "optimize", "refactor", or "investigate"
 - Open-ended research tasks
 - Future considerations, ideas, or alternatives
