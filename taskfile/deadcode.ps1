@@ -1,13 +1,6 @@
 # Check for unreachable functions in cmd entry points.
-#
-# Use the allowlist for three cases:
-#  - functions staged for future use that are not reachable yet (temporary);
-#  - unexported marker methods that seal an event interface. A seal exists to stop
-#    another package from implementing the interface; calling it would defeat the
-#    point, so it is unreachable by construction and always will be;
-#  - test-support API: a function that exists so a test can assert something about
-#    the production code itself. It is unreachable from a cmd entry point by nature,
-#    and the alternative (dropping it) means dropping the assertion it enables.
+# Each exception has a comment explaining its purpose.
+
 $allow = @(
 )
 
@@ -26,7 +19,8 @@ if ($exit -ne 0) {
 $remaining = $lines | Where-Object {
     if ($_ -match 'unreachable func:\s*(.+)$') {
         $allow -notcontains $matches[1].Trim()
-    } else {
+    }
+    else {
         $true
     }
 }
