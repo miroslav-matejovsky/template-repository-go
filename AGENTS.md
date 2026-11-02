@@ -83,7 +83,7 @@
 - Avoid sleeps and timing dependencies.
 - Prefer simple unit tests over heavy integration tests.
 - Test observable behavior, not implementation details.
-- NEVER start and verify on real running systems, not even on local or developer environments
+- NEVER start and verify on real running systems, not even on local or developer environments unless explicitly asked.
 - Verification on real running systems should be documented in the '.todo' file at the repository root.
 
 ## Go Specific
