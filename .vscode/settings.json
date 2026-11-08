@@ -44,9 +44,6 @@
   },
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.suggest.enabled": false,
-  "powershell.startAutomatically": true,
-  "powershell.integratedConsole.showOnStartup": false,
-  "powershell.enableProfileLoading": true,
   "go.testTimeout": "20m",
   "go.testFlags": [
     "-v",
@@ -60,9 +57,6 @@
     "standaloneTags": [
       "ignore"
     ]
-  },
-  "files.associations": {
-    ".env.ps1": "powershell"
   },
   "vsicons.associations.folders": [
     {
@@ -88,12 +82,11 @@
     "govulncheck",
     "healthz",
     "HTMX",
-    "LASTEXITCODE",
     "matejovsky",
     "miroslav",
+    "mise",
     "overcomplicate",
     "pkgname",
-    "stretchr",
-    "taskfile"
+    "stretchr"
   ]
 }

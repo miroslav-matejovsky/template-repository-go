@@ -1,6 +1,6 @@
 version: "2"
 run:
-  # Allow a cold build when task all runs lint after clean.
+  # Allow a cold build when mise run all runs lint after clean.
   timeout: 15m
 
 linters:

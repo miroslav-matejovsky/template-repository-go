@@ -13,7 +13,7 @@
 - Do not re-read files already read unless file may have changed.
 - Keep solutions simple and direct.
 - When unclear, explain problem and ask for clarification, or write note to local file and stop.
-- Before task complete and code changes are made, run `task all` and `task all` must pass.
+- Before task complete and code changes are made, run `mise run all` and `mise run all` must pass.
 - Experimentation phase. Favor progress and clean code over backwards compatibility.
 - Bigger decisions must be evaluated against principles defined in `dev/principles` folder.
 

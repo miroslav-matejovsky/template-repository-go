@@ -1,5 +1,8 @@
 .env
-.env.ps1
+mise.local.toml
+mise.*.local.toml
+__pycache__/
+*.pyc
 bin/
 .test-results/
 .gocache/
