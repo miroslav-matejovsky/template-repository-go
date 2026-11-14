@@ -1,4 +1,5 @@
 # use 'mise outdated --bump' to see outdated dependencies
+# use 'mise upgrade --minimum-release-age 0s claude' to upgrade the dependency immediately
 
 [env]
 # Keep the third-party vendor snapshot read-only as dependencies evolve.
