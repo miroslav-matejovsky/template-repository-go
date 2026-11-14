@@ -1,3 +1,9 @@
+# use 'mise outdated --bump' to see outdated dependencies
+
+[env]
+# Keep the third-party vendor snapshot read-only as dependencies evolve.
+GOFLAGS = "-mod=mod"
+
 # Explicit development tool versions. Keep Go aligned with go.mod.
 [tools]
 go = "1.27.3"

@@ -75,6 +75,7 @@
     "fe3dback",
     "frontends",
     "gocache",
+    "GOFLAGS",
     "golangci",
     "gopls",
     "gotest",
