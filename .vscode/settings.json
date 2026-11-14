@@ -65,6 +65,13 @@
         "dev"
       ],
       "format": "svg"
+    },
+    {
+      "icon": "config",
+      "extensions": [
+        "mise-tasks"
+      ],
+      "format": "svg"
     }
   ],
   "cSpell.words": [
