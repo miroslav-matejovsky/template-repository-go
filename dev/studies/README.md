@@ -8,7 +8,9 @@ backlog items, or follow-up work. Studies do not require a fixed structure, but 
 conclusion must be traceable to documented evidence.
 
 Each study has its own folder under `dev/studies/`. The folder `README.md` is the
-authoritative record. Supporting notes, logs, benchmarks, reports, screenshots,
+authoritative record.
+`open-questions.md` captures the questions that need to be answered with provided context and recommendations.
+Supporting notes, logs, benchmarks, reports, screenshots,
 references, and generated artifacts are stored alongside it.
 
 ```text
@@ -16,6 +18,7 @@ studies/
 ├── README.md
 ├── <study-topic>/
 │   ├── README.md
+│   ├── open-questions.md
 │   ├── evidence/
 │   └── ...
 └── ...

@@ -1,6 +1,9 @@
 # Plans
 
-This directory contains implementation plans. A plan is an executable specification, not a discussion document.
+This directory contains active implementation plans. A plan is an executable specification, not a discussion document.
+
+Completed plans are removed; remaining work is tracked in the root `.todo` or the
+development backlog.
 
 Each plan has:
 - `README.md` describing goal, scope, architecture impact, deliverables, and success criteria
@@ -34,6 +37,7 @@ Step order:
 - No step introduces code that nothing calls. New code is wired into a caller reachable from an entry point in the same step, so dead code checks stay green.
 - Until a layer is implemented, its contract is satisfied by the simplest failing implementation, for example a stub returning a "not implemented" error. Stubs are replaced, never accumulated.
 - Every step is verifiable on its own. A step that can only be verified once a later step exists is ordered incorrectly; split it or move the verification into the step that completes the behavior.
+- Manual verification must be treated as a separate step and documented as special last step of the plan.
 
 Requirements:
 - Plan must be understandable and actionable even by a medium-skilled developer.
@@ -54,9 +58,3 @@ Forbidden:
 - Acceptance criteria that require subjective judgment
 
 A plan is complete only when all implementation tasks are finished, all tests pass, all acceptance criteria are verified, and the deliverables exist in the codebase.
-
-## Active plan sets
-
-| Name | Description |
-|------|-------------|
-| Example Plan | Demonstrates the structure and content of a typical implementation plan |

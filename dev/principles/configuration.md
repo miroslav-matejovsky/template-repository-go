@@ -23,6 +23,7 @@ configuration makes behavior visible, understandable, controllable, and explaina
 - A running system exposes which configuration was supplied and which is currently active.
 - Configuration is discoverable by humans and machines, because system intent stays
   explicit.
+- Prefer configuration files with comments (yml or jsonc) with commentary explaining the purpose and impact of each parameter.
 
 ## Development Rule
 

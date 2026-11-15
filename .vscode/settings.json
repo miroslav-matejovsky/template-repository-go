@@ -44,9 +44,6 @@
   },
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.suggest.enabled": false,
-  "powershell.startAutomatically": true,
-  "powershell.integratedConsole.showOnStartup": false,
-  "powershell.enableProfileLoading": true,
   "go.testTimeout": "20m",
   "go.testFlags": [
     "-v",
@@ -61,14 +58,18 @@
       "ignore"
     ]
   },
-  "files.associations": {
-    ".env.ps1": "powershell"
-  },
   "vsicons.associations.folders": [
     {
       "icon": "docs",
       "extensions": [
         "dev"
+      ],
+      "format": "svg"
+    },
+    {
+      "icon": "config",
+      "extensions": [
+        "mise-tasks"
       ],
       "format": "svg"
     }
@@ -81,6 +82,7 @@
     "fe3dback",
     "frontends",
     "gocache",
+    "GOFLAGS",
     "golangci",
     "gopls",
     "gotest",
@@ -88,12 +90,12 @@
     "govulncheck",
     "healthz",
     "HTMX",
-    "LASTEXITCODE",
     "matejovsky",
     "miroslav",
+    "mise",
     "overcomplicate",
     "pkgname",
-    "stretchr",
-    "taskfile"
+    "pycache",
+    "stretchr"
   ]
 }

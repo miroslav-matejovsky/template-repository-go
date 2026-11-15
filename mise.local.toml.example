@@ -1,0 +1,4 @@
+# Copy to mise.local.toml for private, machine-specific environment variables.
+[env]
+# SOME_KEY is an illustrative string; replace it with project-specific variables.
+SOME_KEY = "some-value"

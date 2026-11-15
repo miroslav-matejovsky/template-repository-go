@@ -1,0 +1,74 @@
+# use 'mise outdated --bump' to see outdated dependencies
+# use 'mise upgrade --minimum-release-age 0s claude' to upgrade the dependency immediately
+
+[env]
+# Keep the third-party vendor snapshot read-only as dependencies evolve.
+GOFLAGS = "-mod=mod"
+
+# Explicit development tool versions. Keep Go aligned with go.mod.
+[tools]
+go = "1.27.3"
+python = "3.13.18"
+# Use the published linter binary; Go CLI packages are built by the go: backend.
+golangci-lint = "2.15.0"
+"go:golang.org/x/vuln/cmd/govulncheck" = "1.9.0"
+"go:golang.org/x/tools/cmd/deadcode" = "0.52.0"
+"go:gotest.tools/gotestsum" = "1.13.0"
+"go:github.com/fe3dback/go-arch-lint" = "1.19.1"
+
+[tasks.default]
+description = "Show available tasks"
+run = "mise tasks ls"
+
+[tasks.tidy]
+description = "Tidy Go module dependencies"
+run = "go mod tidy"
+
+[tasks.fmt]
+description = "Format Go code"
+run = "go fmt ./..."
+
+[tasks.vet]
+description = "Check Go code for potential issues"
+run = "go vet ./..."
+
+[tasks.arch-lint]
+description = "Check package dependencies and architecture rules"
+run = "go-arch-lint check"
+
+[tasks.lint]
+description = "Run golangci-lint"
+run = "golangci-lint run ./..."
+
+[tasks."test:tasks"]
+description = "Run Python task unit tests"
+run = "python -m unittest discover -s scripts -p test_tasks.py"
+
+[tasks.all]
+description = "Run all checks and tests before considering work complete"
+# Run in order: cleanup and module changes must finish before checks and tests.
+run = [
+  { task = "clean" },
+  { task = "tidy" },
+  { task = "fmt" },
+  { task = "vet" },
+  { task = "deadcode" },
+  { task = "arch-lint" },
+  { task = "lint" },
+  { task = "test" },
+]
+
+[tasks.run]
+description = "Run the application for development"
+run = "go run ./cmd/..."
+
+[tasks.vendor]
+description = "Re-sync vendor after changing dependencies"
+run = ["go mod tidy", "go mod vendor"]
+
+[tasks.deps]
+description = "List direct dependencies and available updates; then use mise run vendor"
+run = [
+  "go mod tidy",
+  'go list -mod=readonly -u -m -f "{% raw %}{{if not .Indirect}}{{.}}{{end}}{% endraw %}" all',
+]
