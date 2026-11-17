@@ -11,4 +11,5 @@ Configuration captures operational choices that are intentionally adjustable acr
 - Keep stable implementation details and internal constants in code when configurability provides no meaningful operational benefit.
 - Make important effective configuration observable for troubleshooting and operational understanding.
 
-Guiding rule: Operators should be able to understand and control important operational behavior without reading source code, but not every value that influences behavior needs to become configuration.
+Guiding rule: Operators should be able to understand and control important operational
+behavior without reading source code, but not every value that influences behavior needs to become configuration.
