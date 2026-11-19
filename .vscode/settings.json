@@ -84,6 +84,7 @@
     "gocache",
     "GOFLAGS",
     "golangci",
+    "gomvpkg",
     "gopls",
     "gotest",
     "gotestsum",
