@@ -5,7 +5,7 @@ or development approach at a specific point in time.
 
 A study gathers evidence, records findings, and may produce decisions, recommendations,
 backlog items, or follow-up work. Studies do not require a fixed structure, but every
-conclusion must be traceable to documented evidence.
+conclusion must be traceable to documented evidence. Only ASCII diagrams and text are allowed.
 
 Each study has its own folder under `dev/studies/`. The folder `README.md` is the
 authoritative record.
