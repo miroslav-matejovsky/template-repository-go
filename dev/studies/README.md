@@ -9,9 +9,8 @@ conclusion must be traceable to documented evidence.
 
 Each study has its own folder under `dev/studies/`. The folder `README.md` is the
 authoritative record.
-`open-questions.md` captures the questions that need to be answered with provided context and recommendations.
-Supporting notes, logs, benchmarks, reports, screenshots,
-references, and generated artifacts are stored alongside it.
+`open-questions.md` file captures the questions in simple words that need to be answered.
+Questions are listed with provided context, recommendations and why they are important.
 
 ```text
 studies/
