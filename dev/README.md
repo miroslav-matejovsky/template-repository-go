@@ -1,6 +1,9 @@
 # Dev
 
-Working records used to understand and evolve this repository. This is not user-facing or technical documentation.
+Working records used to understand and evolve this repository.
+This is not user-facing or technical documentation, therefore only ASCII diagrams and text are allowed.
+Prefer plain language over complex terminology, so that the records remain accessible and easy to understand
+without broader context or prior knowledge.
 
 Each folder has a `README.md` describing its contents and expected format.
 

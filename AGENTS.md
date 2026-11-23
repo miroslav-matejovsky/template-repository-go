@@ -1,7 +1,6 @@
 ## Core Rules
 
 - Never commit changes. NEVER!
-- Be brave; Be Honest; Be kind; Be true;
 - Be pragmatic and don't overcomplicate things, focus on delivering value not perfection.
 - Apply Boy Scout Rule: always leave the codebase cleaner than you found it.
 - Communicate clearly and directly. Short sentences. Simple language.
