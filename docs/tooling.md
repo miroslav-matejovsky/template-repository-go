@@ -1,7 +1,7 @@
 # Development tooling
 
 `mise.toml` declares tool versions, simple command tasks, and the `all` sequence.
-mise automatically discovers executable Python tasks in `mise-tasks/`; their
+mise automatically discovers executable Python tasks in `.mise/tasks/`; their
 `#MISE` comments declare descriptions and dependencies. mise installs Go, Python,
 golangci-lint, and the Go command-line tools. Python scripts use only the standard
 library and work on Windows, Linux, and macOS.
@@ -53,14 +53,15 @@ Run the Python task tests independently with:
 mise run test:tasks
 ```
 
-These tests use temporary files and mocked tools. They do not publish releases or
+Python task tests live in `.mise/tests/test_tasks.py` and use unittest discovery.
+They use temporary files and mocked tools. They do not publish releases or
 start the application. Directory-link coverage is skipped when the host does not
 allow symlink creation.
 
 Python file tasks have `#!/usr/bin/env python` shebangs and LF line endings.
 Their executable bits are stored in Git so mise discovers and executes them on
 Linux and macOS. When adding a task from Windows, use
-`git add --chmod=+x -- mise-tasks/<name>.py`. mise reads the shebang on Windows to
+`git add --chmod=+x -- .mise/tasks/<name>.py`. mise reads the shebang on Windows to
 select the Python interpreter. Task names omit the `.py` extension.
 
 ## Dependencies

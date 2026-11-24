@@ -43,7 +43,7 @@ run = "golangci-lint run ./..."
 
 [tasks."test:tasks"]
 description = "Run Python task unit tests"
-run = "python -m unittest discover -s scripts -p test_tasks.py"
+run = "python -m unittest discover -s .mise/tests -p test_*.py"
 
 [tasks.all]
 description = "Run all checks and tests before considering work complete"

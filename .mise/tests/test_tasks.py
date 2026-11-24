@@ -10,7 +10,8 @@ import unittest
 from unittest.mock import Mock, patch
 
 # Import the task files without executing their command-line entry points.
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "mise-tasks"))
+TASKS_DIRECTORY = Path(__file__).resolve().parent.parent / "tasks"
+sys.path.insert(0, str(TASKS_DIRECTORY))
 
 import clean
 import deadcode
