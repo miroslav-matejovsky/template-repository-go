@@ -7,14 +7,15 @@ GOFLAGS = "-mod=mod"
 
 # Explicit development tool versions. Keep Go aligned with go.mod.
 [tools]
-go = "1.27.3"
-python = "3.13.18"
+go = "1.27.4"
+python = "3.15.2"
 # Use the published linter binary; Go CLI packages are built by the go: backend.
 golangci-lint = "2.15.0"
-"go:golang.org/x/vuln/cmd/govulncheck" = "1.9.0"
-"go:golang.org/x/tools/cmd/deadcode" = "0.52.0"
+"go:golang.org/x/vuln/cmd/govulncheck" = "1.10.0"
+"go:golang.org/x/tools/cmd/deadcode" = "0.53.0"
 "go:gotest.tools/gotestsum" = "1.13.0"
-"go:github.com/fe3dback/go-arch-lint" = "1.19.1"
+"go:github.com/fe3dback/go-arch-lint" = "1.19.2"
+gh = "latest"
 
 [tasks.default]
 description = "Show available tasks"
