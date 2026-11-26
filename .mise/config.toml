@@ -1,5 +1,6 @@
 # use 'mise outdated --bump' to see outdated dependencies
-# use 'mise upgrade --minimum-release-age 0s claude' to upgrade the dependency immediately
+# use 'mise upgrade --minimum-release-age 0s claude-code' to upgrade the dependency immediately
+# use 'mise ls --currnet' to see available tasks
 
 [env]
 # Keep the third-party vendor snapshot read-only as dependencies evolve.
@@ -16,6 +17,8 @@ golangci-lint = "2.15.0"
 "go:gotest.tools/gotestsum" = "1.13.0"
 "go:github.com/fe3dback/go-arch-lint" = "1.19.2"
 gh = "latest"
+antigravity-cli = "latest"
+claude-code = "latest"
 
 [tasks.default]
 description = "Show available tasks"

@@ -1,6 +1,6 @@
-# Bugs
+# Issues
 
-Observed defects awaiting a fix. One bug per file. These are confirmed wrong behaviors
+Observed defects awaiting a fix. One issue per file. These are confirmed wrong behaviors
 seen in real captures or demonstrated by code review and focused tests, distinct from the
 optional enhancements in
 [`../backlog/`](../backlog/README.md).
@@ -31,6 +31,6 @@ Then the file continues with the detailed description of the defect:
 Remove a file when its code fix is implemented. Track any still-needed live
 verification as a direct action in the root `.todo` file.
 
-## Open bugs
+## Open issues
 
 None.

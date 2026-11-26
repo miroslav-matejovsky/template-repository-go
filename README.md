@@ -36,9 +36,8 @@ In the last step, I execute the plan, monitor progress, and make adjustments as 
 
 This may look very inefficient at first glance, but it allows for careful oversight and helps ensure that the agent's actions align with the intended plan. Over time, this process helps refine both the agent's performance and my own understanding of the tasks at hand. Also see [Ironies of Automation](https://en.wikipedia.org/wiki/Ironies_of_Automation) for a better understanding of the trade-offs involved in automation and the need for human oversight.
 
-The `bugs` and `backlog` folders are used to track known issues and improvements that are not urgent or immediate. They are usually useful as references during the study and planning phases.
+The `issues` and `backlog` folders are used to track known issues and improvements that are not urgent or immediate. They are usually useful as references during the study and planning phases.
 
 ## Links
 
 - [HTMX and Go for WebUI](https://www.alexedwards.net/blog/how-i-use-htmx-with-go)
-- [Ironies of Automation](https://en.wikipedia.org/wiki/Ironies_of_Automation)
